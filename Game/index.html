@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Mania</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game_name">
+        <h1>Welcome to Guessing Mania <br> <span>a place to pass your time</span></h1>
+    </div>
+    <div id="container">
+        <h2>Beat the computer by guessing its number</h2>
+        <div id="screen" class="screen">
+            <button id="play" class="play" onclick="Play()">Play</button>
+            <button id="how_to_play" class="play" style="margin-top:10px;" onclick="How_to_play()">How to play ?</button>
+            <div class="howtoplay" style="display: none;" id="howtoplay">
+                <span id="back" onclick="Back()">&larrhk;</span>
+                <p>
+                    Enter any number between 1 to 10. Computer will also choose a no.
+                    You only have 5 chances. If you able to guess the computer's number, you win !
+                </p>
+            </div>
+            <label id="enter_num" style="display: none;" for="num">Enter your number:</label>
+            <input style="display: none;" type="number" id="num">
+            <button style="display: none;" id="done" onclick="Done()">Done</button>
+            <button style="display: none;" id="reset" onclick="Reset()">Reset</button>
+            <button style="display: none;" id="play_again" onclick="Play_again()">Play again</button>
+            <p id="result"></p>
+        </div>
+        
+        <div id="score" class="score" style="display: none;">
+            <p>Computer: <span id="cscore">0</span></p>
+            <p>You: <span id="uscore">0</span></p>
+        </div>
+        
+        <div class="turns" id="turns" style="display: none;">
+            <p>Turns left: <span id="uturns">5</span></p>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
